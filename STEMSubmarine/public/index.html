@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>AI Submarine Trainer</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <h1>AI Submarine Physics Trainer</h1>
+
+        <div id="ocean">
+            <div id="bubble_container"></div>
+            <div id="submarine"></div>
+        </div>
+
+        <div id="stats">
+            <p>Depth: <span id="depth">0</span> m</p>
+            <p>Pressure: <span id="pressure">1</span> atm</p>
+            <p>Vertical Velocity: <span id="vertical_velocity">0</span> m/s</p>
+            <p>Horizontal Velocity:<span id="horizontal_velocity">0</span> m/s</p>
+            <p>Ballast: <span id="ballast_value">50</span>%</p>
+        </div>
+
+        <div id="controls">
+
+            <label for="ballast">
+                Ballast
+            </label>
+
+            <input
+                type="range"
+                id="ballast"
+                min="0"
+                max="100"
+                value="50"
+            >
+
+            <label for="thrust">
+                Thrust
+            </label>
+
+            <input
+                type="range"
+                id="thrust"
+                min="-10"
+                max="10"
+                value="0"
+            >
+
+        </div>
+
+        <div id="ai_box">
+
+            <h2>AI Tutor</h2>
+
+            <p id="ai_text">
+                Ask the AI tutor for help understanding the physics of submarines
+            </p>
+            <button id="ask_ai">
+            Ask AI Tutor
+            </button>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

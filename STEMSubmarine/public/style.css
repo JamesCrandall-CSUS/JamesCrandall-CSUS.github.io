@@ -1,0 +1,103 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #0b1f33;
+    color: white;
+}
+
+#ocean {
+    width: 400px;
+    height: 500px;
+    margin: 20px auto;
+    background: linear-gradient(#4da6ff, #001f3f);
+    background-size: 200% 200%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid white;
+    transition: background 0.1s linear;
+}
+
+#submarine {
+    width: 90px;
+    height: 40px;
+    background: linear-gradient(to bottom, #ffd800, #ccaa00);
+    border-radius: 25px;
+    position: absolute;
+    left: 160px;
+    top: 50px;
+
+    border: 2px solid #333;
+
+    box-shadow:
+        0 0 10px rgba(255,255,0,0.5);
+}
+
+#submarine::after {
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 10px;
+
+    background: #888;
+
+    top: -8px;
+    left: 30px;
+
+    border-radius: 5px 5px 0 0;
+}
+
+#bubble-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    background: rgba(255,255,255,0.7);
+
+    border-radius: 50%;
+
+    animation: rise 3s linear forwards;
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+label {
+    display: block;
+    margin: 10px;
+}
+
+#ai_box {
+    width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+}
